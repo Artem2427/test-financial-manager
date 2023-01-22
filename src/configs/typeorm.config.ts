@@ -8,7 +8,7 @@ export const getTypeORMConfig = async (
     type: 'postgres',
     url:
       configService.get('DATABASE_URL_PROD') ??
-      configService.get('DATABASE_URL'),
+      configService.get('POSTGRES_URI'),
     ssl: configService.get('DATABASE_URL_PROD')
       ? {
           rejectUnauthorized: false,

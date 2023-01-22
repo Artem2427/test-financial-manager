@@ -8,7 +8,7 @@ import { UserEntity } from 'src/user/entity/user.entity';
 import { Repository } from 'typeorm';
 import { AuthDto } from './dto/auth.dto';
 import * as jwt from 'jsonwebtoken';
-import * as bcrypt from 'bcrypt';
+import * as bcrypt from 'bcryptjs';
 import { IToken, TokenDecodeData } from './types/token.interface';
 import { ConfigService } from '@nestjs/config';
 import { EMAIL_IS_TAKEN, INVALID_EMAIL_OR_PASSWORD } from './errors/errors';

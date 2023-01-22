@@ -1,7 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { BaseEntity } from 'src/core/entities/base.entity';
 import { BeforeInsert, Column, Entity, OneToMany } from 'typeorm';
-import * as bcrypt from 'bcrypt';
+import * as bcrypt from 'bcryptjs';
 import { BankEntity } from 'src/bank/entity/bank.entity';
 import { CategoryTransactionEntity } from 'src/category-transaction/entity/category-transaction.entity';
 
