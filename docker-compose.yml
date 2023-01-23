@@ -3,10 +3,10 @@ services:
   postgresql:
     container_name: postgresql
     image: postgres
-    env_file:
-      - .env
     environment:
       PG_DATA: var/lib/postgresql/data
+      JWT_SECRET: 'pork-top-228'
+      POSTGRES_URI: 'postgres://financial_manager:123@postgresql:5432/test_financial_manager'
     ports:
       - 5432:5432
     volumes:
@@ -16,8 +16,9 @@ services:
     container_name: main
     build:
       context: .
-    env_file:
-      - .env
+    environment:
+      JWT_SECRET: 'pork-top-228'
+      POSTGRES_URI: 'postgres://financial_manager:123@postgresql:5432/test_financial_manager'
     volumes:
       - .:/app
     ports:
